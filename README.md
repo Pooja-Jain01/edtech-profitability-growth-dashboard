@@ -1,35 +1,36 @@
-# EdTech Profitability & Growth Performance Dashboard
+# EdTech Profitability Growth Dashboard
 
-## Overview
-This project analyzes profitability, growth, and marketing efficiency for an EdTech business using Power BI.  
-The dashboard is designed to support management-level decision making through clear, KPI-driven insights.
+## 1. Business Problem
+Management could not clearly identify which courses were driving profit vs just revenue volume. The goal was to analyze course-level profitability and marketing efficiency.
 
-## Business Scope
-- ₹3B+ total revenue analyzed  
-- ₹636M net profit  
-- 25.2% net profit margin  
-- 294K total enrollments  
+## 2. Data Source
+The dataset was structured in Excel to simulate real EdTech operations, including:
+- Course Name
+- Revenue
+- Marketing Cost
+- Enrollment Count
+- Operational Cost
 
-## Key KPIs & Analysis
-- Revenue and enrollment trends (Year / Quarter / Month)
-- Net profit and net profit margin %
-- Course-wise profitability and cumulative profit %
-- Conversion rate analysis
-- Cost per lead (CPL) and cost per enrollment (CPE)
-- ROI on marketing spend
+Data was cleaned and modeled before importing into Power BI.
 
-## Tools & Techniques
-- Power BI (data modeling, DAX measures, interactive dashboards)
-- Advanced Excel (data cleaning and validation)
-- SQL (data preparation and metric validation)
+## 3. KPIs Used
+1. Net Profit = Revenue - Total Cost  
+2. Net Profit Margin % = Net Profit / Revenue  
+3. Cost per Enrollment = Marketing Cost / Enrollment  
 
-## Business Outcomes
-- Identified high-margin and underperforming courses for pricing and investment decisions
-- Evaluated marketing efficiency using ROI, CPL, and CPE metrics
-- Enabled performance tracking across time periods and course categories
+These KPIs were selected to evaluate profitability, efficiency, and scalability.
 
-## Dashboard Preview
-<img width="1324" height="739" alt="Screenshot 2026-01-14 202005" src="https://github.com/user-attachments/assets/4f2ca4bb-08db-4098-bde2-cc5f8b11bf0c" />
+## 4. Key Insights
+- A small group of courses generated most of the total profit.
+- Some high-enrollment courses had low margins.
+- Marketing spend was inefficient for certain low-profit courses.
 
-## Notes
-This project uses a simulated EdTech dataset for analytical demonstration purposes.
+## 5. Business Recommendations
+- Scale marketing for high-margin courses.
+- Optimize or reprice low-margin high-volume courses.
+- Reallocate budget to protect profitability.
+
+## 6. Tools Used
+- Excel (Data Modeling)
+- Power BI (Dashboard & Visualization)
+
