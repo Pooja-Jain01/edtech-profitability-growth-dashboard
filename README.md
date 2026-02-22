@@ -121,7 +121,8 @@ A Power BI dashboard that:
 
 ## Dashboard Preview
 
-![Dashboard Overview](dashboard_screenshots.png)
+![Dashboard](dashboard_screenshots.png)
+![KPI View](KPI%20Dashboard%20Screenshot.png)
 
 ---
 
