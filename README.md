@@ -2,7 +2,7 @@
 
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=black) ![DAX](https://img.shields.io/badge/DAX-Measures-blue) ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
-An interactive Power BI dashboard analysing **₹2.53B revenue, ₹636M net profit (25.2% margin)** across 9 EdTech courses, covering course-level profitability, marketing efficiency and the lead-to-enrollment funnel from ~10K transactions (Jan 2023 – Dec 2024).
+An interactive Power BI dashboard analysing **₹3B revenue, ₹636M net profit (25.2% margin)** across 9 EdTech courses, covering course-level profitability, marketing efficiency and the lead-to-enrollment funnel from ~10K transactions (Jan 2023 – Dec 2024).
 
 ![Dashboard](Dashboard%20Screenshot.png)
 
@@ -16,7 +16,7 @@ Which courses actually drive profit, and is marketing spend being used efficient
 ## 📈 Headline Metrics (from the dashboard)
 | Metric | Value |
 |---|---|
-| Revenue | ₹2.53B |
+| Revenue | ₹3B |
 | Net Profit | ₹636.4M |
 | Net Profit Margin | 25.2% |
 | Marketing Spend | ₹1.03B |
@@ -98,7 +98,7 @@ DIVIDE(SUM(Clean_EdTech_Fact[Enrollments_clean]), SUM(Clean_EdTech_Fact[Leads_Cl
 2. **Model:** star schema with a fact table and dimension tables (including a date dimension).
 3. **Measure:** built 10+ DAX measures for profit, margin, ROI, cost and conversion metrics.
 4. **Visualise:** single-page dashboard with slicers and cross-filtering.
-5. **Validate:** cross-checked KPI totals against the course-level table (e.g., total revenue ₹2.53B → 25.2% margin on ₹636.4M profit).
+5. **Validate:** cross-checked KPI totals against the course-level table (e.g., total revenue ₹3B → 25.2% margin on ₹636.4M profit).
 
 ## 🔮 Future Enhancements
 - [ ] **Course-level marketing ROI** table and visual
