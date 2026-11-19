@@ -25,7 +25,7 @@ Which courses actually drive profit, and is marketing spend being used efficient
 | Leads | ~998K |
 | Cost per Lead / Enrollment | ~₹1,030 / ~₹3,490 |
 
-> Marketing ROI = (Revenue − Marketing Spend) ÷ Marketing Spend. It is revenue-based, so it is *before* instructor cost and refunds. After all costs, net profit is ~₹0.62 for every ₹1 of marketing spend.
+> Marketing ROI = (Revenue − Marketing Spend) ÷ Marketing Spend. It is revenue-based, so it ignores instructor cost and refunds. For comparison, net profit is ~₹0.62 per ₹1 of marketing spend.
 
 ## 💡 Key Insights
 1. **Profit is concentrated, and driven mainly by scale.** The top 3 courses (Digital Marketing, Equity Research, SQL Bootcamp) generate **~48.5% of net profit**; the top 4 generate ~62%.
@@ -47,7 +47,7 @@ Which courses actually drive profit, and is marketing spend being used efficient
 | Financial Modeling | 181.4 | 37.3 | 20.5% |
 
 ## ✅ Recommendations
-- **Protect and grow the top profit drivers** (Digital Marketing, SQL Bootcamp, Data Analytics) since they carry most of the profit.
+- **Protect and grow the top profit drivers with healthy margins** (Digital Marketing, SQL Bootcamp, Data Analytics): together ~₹300M profit (~47% of total) at 25-27% margins.
 - **Review pricing/cost for Equity Research**, which has high revenue but only 23.1% margin; every +1 pt of margin is ~₹4M profit.
 - **Investigate Financial Modeling and Brand Strategy** (lowest margins, lowest profit) before allocating more marketing budget to them.
 - **Add course-level ROI** (see Future Enhancements) before reallocating marketing budget.
@@ -60,7 +60,7 @@ The raw data was intentionally messy. Missing values before cleaning:
 
 **What this means for the results:**
 - Metrics that depend on imputed fields (marketing ROI, cost per lead / enrollment, **conversion rate of 29.45%**) should be treated as indicative, not exact. Conversion rate is likely inflated by imputing leads and enrollments independently.
-- Revenue, profit and margin by course are more reliable than funnel and marketing metrics.
+- Revenue is the most reliable figure. Net profit and margin also depend on cost fields that were partly imputed (e.g., instructor cost, 66.7% missing), so treat them as estimates; the sensitivity check in Future Enhancements is needed to confirm that the course ranking holds.
 
 ## 🛠️ Tools & Technologies
 Excel (exploration) · Power Query / M (ETL) · Power BI Desktop · DAX · Star-schema data modelling
