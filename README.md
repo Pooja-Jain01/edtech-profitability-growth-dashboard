@@ -45,9 +45,10 @@ Which courses actually drive profit, and is marketing spend being used efficient
 | Performance Marketing | 192.3 | 50.7 | 26.4% |
 | Brand Strategy | 189.9 | 41.6 | 21.9% |
 | Financial Modeling | 181.4 | 37.3 | 20.5% |
+| Total | ₹2,530.3M | ₹636.4M | 25.2% |
 
 ## ✅ Recommendations
-- **Protect and grow the top profit drivers with healthy margins** (Digital Marketing, SQL Bootcamp, Data Analytics): together ~₹300M profit (~47% of total) at 25-27% margins.
+- **Protect and grow the top profit drivers with healthy margins** (Digital Marketing, SQL Bootcamp, Data Analytics): together ~₹300.4M profit (~47.2% of total profit) at 25-27% margins.
 - **Review pricing/cost for Equity Research**, which has high revenue but only 23.1% margin; every +1 pt of margin is ~₹4M profit.
 - **Investigate Financial Modeling and Brand Strategy** (lowest margins, lowest profit) before allocating more marketing budget to them.
 - **Add course-level ROI** (see Future Enhancements) before reallocating marketing budget.
@@ -110,7 +111,7 @@ DIVIDE(SUM(Clean_EdTech_Fact[Enrollments_clean]), SUM(Clean_EdTech_Fact[Leads_Cl
 ## 📂 Repository Structure
 ```
 ├── EdTech_Messy_Raw_Data_10k.csv
-├── Ed-tech-Profitability and performance dashboard.pbit
+├── Ed-tech-Profitability and performance dashboard vf.pbix
 ├── Dashboard Screenshot.png
 ├── KPI Dashboard Screenshot.png
 ├── screenshots/
@@ -119,9 +120,10 @@ DIVIDE(SUM(Clean_EdTech_Fact[Enrollments_clean]), SUM(Clean_EdTech_Fact[Leads_Cl
 ```
 
 ## 🚀 How to Use
+
 1. Clone the repo or download the ZIP.
-2. Open the `.pbit` template in Power BI Desktop (free).
-3. Point the data source to `EdTech_Messy_Raw_Data_10k.csv` when prompted and click **Load**.
+2. Open the `.pbix` file in Power BI Desktop.
+3. If prompted, point the data source to `EdTech_Messy_Raw_Data_10k.csv` and click **Load**.
 
 ## 👤 About
 **Pooja Jain**: PGDM (Finance & Business Analytics) student building a profile for data analytics roles.
