@@ -2,7 +2,7 @@
 
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=black) ![DAX](https://img.shields.io/badge/DAX-Measures-blue) ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
-An interactive Power BI dashboard analysing **₹2530M revenue, ₹636M net profit (25.2% margin)** across 9 EdTech courses, covering course-level profitability, marketing efficiency and the lead-to-enrollment funnel from ~10K transactions (Jan 2023 – Dec 2024).
+An interactive Power BI dashboard analysing **₹2530M revenue, ₹636.4M net profit (25.2% margin)** across 9 EdTech courses, covering course-level profitability, marketing efficiency and the lead-to-enrollment funnel from ~10K transactions (Jan 2023 – Dec 2024).
 
 ![Dashboard](Dashboard%20Screenshot.png)
 
@@ -45,7 +45,7 @@ Which courses actually drive profit, and is marketing spend being used efficient
 | Performance Marketing | 192.3 | 50.7 | 26.4% |
 | Brand Strategy | 189.9 | 41.6 | 21.9% |
 | Financial Modeling | 181.4 | 37.3 | 20.5% |
-| Total | ₹2,530.3M | ₹636.4M | 25.2% |
+| Total | ₹2,530M | ₹636.4M | 25.2% |
 
 ## ✅ Recommendations
 - **Protect and grow the top profit drivers with healthy margins** (Digital Marketing, SQL Bootcamp, Data Analytics): together ~₹300.4M profit (~47.2% of total profit) at 25-27% margins.
@@ -113,6 +113,7 @@ DIVIDE(SUM(Clean_EdTech_Fact[Enrollments_clean]), SUM(Clean_EdTech_Fact[Leads_Cl
 ├── EdTech_Messy_Raw_Data_10k.csv
 ├── Ed-tech-Profitability and performance dashboard vf.pbix
 ├── Dashboard Screenshot.png
+├── Dashboard screenshots 2.png
 ├── KPI Dashboard Screenshot.png
 ├── screenshots/
 ├── LICENSE
