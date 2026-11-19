@@ -1,421 +1,131 @@
 # 📊 EdTech Profitability & Growth Dashboard
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Power BI](https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
-[![Made with DAX](https://img.shields.io/badge/DAX-0078D4?logo=microsoft&logoColor=white)](https://docs.microsoft.com/en-us/dax/)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?logo=powerbi&logoColor=black) ![DAX](https://img.shields.io/badge/DAX-Measures-blue) ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
-> An interactive Power BI dashboard analyzing **₹3.04B revenue, ₹636M net profit, and 25.2% margin** across 9 EdTech courses, helping identify profitability drivers and optimize marketing ROI from 10,000+ transactions.
+An interactive Power BI dashboard analysing **₹2.53B revenue, ₹636M net profit (25.2% margin)** across 9 EdTech courses, covering course-level profitability, marketing efficiency and the lead-to-enrollment funnel from ~10K transactions (Jan 2023 – Dec 2024).
 
----
+![Dashboard](Dashboard%20Screenshot.png)
 
-## 🎯 Project Overview
+## 🎯 Business Question
+Which courses actually drive profit, and is marketing spend being used efficiently? The dashboard gives a single view of course-level profit and margin, cost per lead / enrollment, and marketing ROI so pricing and budget decisions can be prioritised.
 
-This project delivers a comprehensive business intelligence solution for an EdTech company, analyzing course-level profitability, marketing efficiency, and growth trends. The dashboard enables data-driven decisions on pricing, marketing budget allocation, and course scaling strategies.
+## 📂 Data Source
+- Public **Kaggle** dataset: ~9,999 transactions, 9 courses, 4 categories: Data, Finance, Marketing, General/Foundation.
+- The business scenario in this project is illustrative; the analysis is a portfolio exercise on a public dataset, not on a real company's internal data.
 
-### Key Metrics at a Glance
-
+## 📈 Headline Metrics (from the dashboard)
 | Metric | Value |
-|--------|-------|
-| **Total Revenue** | ₹3.04 Billion |
-| **Net Profit** | ₹636.09 Million |
-| **Profit Margin** | 25.2% |
-| **Total Enrollments** | 243,603 students |
-| **Marketing ROI** | 3.2x |
-| **Data Period** | Jan 2023 - Dec 2024 |
+|---|---|
+| Revenue | ₹2.53B |
+| Net Profit | ₹636.4M |
+| Net Profit Margin | 25.2% |
+| Marketing Spend | ₹1.03B |
+| Marketing ROI (revenue-based) | 146% (ROAS 2.46x) |
+| Enrollments | ~294K |
+| Leads | ~998K |
+| Cost per Lead / Enrollment | ~₹1,030 / ~₹3,490 |
 
----
-
-## 🚀 Key Features
-
-✅ **Profitability Analysis** - Course-level profit breakdown with margin percentages  
-✅ **Marketing Performance** - ROI tracking and cost per enrollment metrics  
-✅ **Conversion Funnel** - Lead to enrollment tracking across all courses  
-✅ **Interactive Filters** - Dynamic slicing by date, category, and course  
-✅ **Trend Analysis** - Revenue and profit patterns over 24 months  
-
----
-
-## 📈 Business Problem
-
-### The Challenge
-Management struggled to identify which courses were **genuinely profitable** versus those generating high revenue but consuming disproportionate resources.
-
-**Pain Points:**
-- ❌ High-volume courses with thin margins draining operational capacity
-- ❌ Marketing budget allocated without ROI visibility
-- ❌ No clear view of cost per enrollment or conversion rates
-- ❌ Inability to prioritize scalable, high-margin opportunities
-
-### The Solution
-A Power BI dashboard that:
-- ✅ Calculates true profitability across all cost dimensions
-- ✅ Tracks marketing ROI and customer acquisition costs
-- ✅ Visualizes the complete conversion funnel
-- ✅ Enables evidence-based marketing optimization
-
----
+> Marketing ROI = (Revenue − Marketing Spend) ÷ Marketing Spend. It is revenue-based, so it is *before* instructor cost and refunds. After all costs, net profit is ~₹0.62 for every ₹1 of marketing spend.
 
 ## 💡 Key Insights
+1. **Profit is concentrated, and driven mainly by scale.** The top 3 courses (Digital Marketing, Equity Research, SQL Bootcamp) generate **~48.5% of net profit**; the top 4 generate ~62%.
+2. **Margins are tightly clustered (20.5%–27.8%)**, so differences in profit come mostly from revenue volume rather than margin.
+3. **Digital Marketing leads on both revenue (₹431M) and profit (₹118M)** at a 27.4% margin.
+4. **Lowest margins:** Financial Modeling (20.5%), Brand Strategy (21.9%) and Equity Research (23.1%). Equity Research is high-revenue but below-average margin, so it is a pricing/cost candidate.
+5. **Highest margins:** Power BI Mastery (27.8%), Corporate Finance (27.6%) and Digital Marketing (27.4%).
 
-### 🏆 Top Findings
+| Course | Revenue (₹M) | Net Profit (₹M) | Margin |
+|---|---|---|---|
+| Digital Marketing | 431.3 | 118.2 | 27.4% |
+| Equity Research | 413.6 | 95.4 | 23.1% |
+| SQL Bootcamp | 376.4 | 95.0 | 25.2% |
+| Data Analytics | 344.2 | 87.2 | 25.3% |
+| Corporate Finance | 208.5 | 57.5 | 27.6% |
+| Power BI Mastery | 192.7 | 53.5 | 27.8% |
+| Performance Marketing | 192.3 | 50.7 | 26.4% |
+| Brand Strategy | 189.9 | 41.6 | 21.9% |
+| Financial Modeling | 181.4 | 37.3 | 20.5% |
 
-1. **Profitability Concentration**
-   - Top 3 courses generate **68% of total profit** with only 33% of enrollments
-   - **Data Analytics** alone drives ₹214M profit (33.6% of total)
+## ✅ Recommendations
+- **Protect and grow the top profit drivers** (Digital Marketing, SQL Bootcamp, Data Analytics) since they carry most of the profit.
+- **Review pricing/cost for Equity Research**, which has high revenue but only 23.1% margin; every +1 pt of margin is ~₹4M profit.
+- **Investigate Financial Modeling and Brand Strategy** (lowest margins, lowest profit) before allocating more marketing budget to them.
+- **Add course-level ROI** (see Future Enhancements) before reallocating marketing budget.
 
-2. **Marketing Efficiency**
-   - Average cost per enrollment: **₹1,074**
-   - **SQL Bootcamp** delivers best ROI at **4.2x**
-   - **Brand Strategy** shows lowest ROI at **1.1x** - requires optimization
+## ⚠️ Data Quality & Limitations
+The raw data was intentionally messy. Missing values before cleaning:
+- Leads: 75.6% · Marketing spend: 74.6% · Instructor cost: 66.7% · Enrollments: 50.6%
 
-3. **Growth Trajectory**
-   - Q4 2024 revenue **up 23%** vs Q4 2023
-   - Enrollment conversion improved from **5.8% to 6.4%** YoY
-   - Clear seasonality: **Jan-Feb peak enrollment periods**
+**Handling:** category-average imputation, with imputed records flagged.
 
-4. **Course Performance Tiers**
-
-**High-Margin Champions** (Scale These):
-- Performance Marketing: **31.4% margin**
-- SQL Bootcamp: **28.9% margin**
-- Data Analytics: **27.3% margin**
-
-**Volume Giants** (Optimize Pricing):
-- Digital Marketing: **18.2% margin**, highest enrollment
-- Financial Modeling: **19.1% margin**, high volume
-
-**Underperformers** (Review Strategy):
-- Brand Strategy: **12.1% margin**
-- Corporate Finance: **14.5% margin**
-
----
+**What this means for the results:**
+- Metrics that depend on imputed fields (marketing ROI, cost per lead / enrollment, **conversion rate of 29.45%**) should be treated as indicative, not exact. Conversion rate is likely inflated by imputing leads and enrollments independently.
+- Revenue, profit and margin by course are more reliable than funnel and marketing metrics.
 
 ## 🛠️ Tools & Technologies
-
-- **Microsoft Excel** - Data exploration and structuring
-- **Power Query (M)** - ETL and data transformation
-- **Power BI Desktop** - Dashboard development
-- **DAX** - Business logic and calculated measures
-- **Data Modeling** - Star schema design
-
----
+Excel (exploration) · Power Query / M (ETL) · Power BI Desktop · DAX · Star-schema data modelling
 
 ## 📊 Dashboard Components
-
-### KPI Cards
-- Total Revenue, Net Profit, Profit Margin %
-- Marketing ROI, Total Enrollments
-
-### Visualizations
-- **Line Chart** - Revenue & profit trends over time
-- **Bar Chart** - Top 5 courses by profitability
-- **Funnel Chart** - Lead to enrollment conversion
-- **Table** - Detailed course performance metrics
-- **Column Chart** - Profit comparison across all courses
-
-### Interactive Features
-- Date range slicer
-- Course category filter
-- Cross-filtering across all visuals
-
-
-## Dashboard Preview
-
-![Dashboard](dashboard_screenshots.png)
-![KPI View](KPI%20Dashboard%20Screenshot.png)
-
----
-
-## 📂 Repository Structure
-
-```
-edtech-profitability-growth-dashboard/
-│
-├── EdTech_Messy_Raw_Data_10k.csv                    # Raw dataset (10K records)
-├── Ed-tech-Profitability_and_performance_dashboard.pbit  # Power BI template
-├── LICENSE                                           # MIT License
-└── README.md                                         # This file
-```
-
----
-
-## 🚀 How to Use
-
-### Prerequisites
-- **Power BI Desktop** (Free): [Download here](https://powerbi.microsoft.com/desktop/)
-- Windows 10/11 or Power BI Service account
-
-### Steps
-
-1. **Download Files**
-   ```
-   - Clone this repository or download ZIP
-   - Extract all files to a folder
-   ```
-
-2. **Open Dashboard**
-   ```
-   - Open Power BI Desktop
-   - File → Open → Browse
-   - Select "Ed-tech-Profitability_and_performance_dashboard.pbit"
-   ```
-
-3. **Connect Data** (if prompted)
-   ```
-   - Point to "EdTech_Messy_Raw_Data_10k.csv"
-   - Click "Load"
-   ```
-
-4. **Explore Dashboard**
-   ```
-   - Use slicers to filter by date and category
-   - Click on visuals to cross-filter
-   - Hover for detailed tooltips
-   ```
-
-5. **Refresh Data** (optional)
-   ```
-   - Replace CSV with your own data (same format)
-   - Home ribbon → Refresh
-   ```
-
----
-
-## 📊 Data Overview
-
-### Dataset Specifications
-- **Records:** 9,999 transactions
-- **Period:** January 2023 - December 2024
-- **Courses:** 9 unique courses
-- **Categories:** Data, Finance, Marketing
-
-### Fields
-| Field | Description | Type |
-|-------|-------------|------|
-| Date | Transaction date | Date |
-| Course Category | Course domain | Text |
-| Course Name | Specific course | Text |
-| Course Price | Price in ₹ | Number |
-| Instructor Cost | Instructor payment | Number |
-| Refund Amount | Refunds issued | Number |
-| Leads_Clean | Marketing leads | Number |
-| Enrollments_clean | Actual enrollments | Number |
-| Marketing_spend | Marketing cost | Number |
-
-### Data Quality Notes
-⚠️ **Transparency:** The original dataset contained significant missing values:
-- 75.6% missing lead data
-- 74.6% missing marketing spend
-- 66.7% missing instructor costs
-- 50.6% missing enrollment data
-
-**Handling Approach:**
-- Used category averages for imputation where appropriate
-- Flagged imputed records for transparency
-- Analysis based on ~50% complete data
-- Results may underestimate true metrics
-
----
+- **KPI cards:** Net Profit Margin %, Net Profit, Enrollment, Revenue, Conversion Rate %, ROI on Marketing %
+- **Pareto chart:** Net profit and cumulative profit % by course
+- **Line chart:** Profit by year, quarter and month
+- **Table:** Revenue, net profit and margin % by course (conditional formatting)
+- **Column chart:** Cost per lead and cost per enrollment by course category
+- **Revenue by course** chart
 
 ## 📈 Key DAX Measures
-
-### Net Profit
 ```dax
-Net Profit = 
-SUM(Clean_EdTech_Fact[Revenue]) - 
-SUM(Clean_EdTech_Fact[Total Cost])
-```
+Net Profit = SUM(Clean_EdTech_Fact[Revenue]) - SUM(Clean_EdTech_Fact[Total Cost])
 
-### Net Profit Margin %
-```dax
-Net Profit Margin % = 
+Net Profit Margin % =
+DIVIDE([Net Profit], SUM(Clean_EdTech_Fact[Revenue]), 0) * 100
+
+ROI on Marketing =
 DIVIDE(
-    [Net Profit],
-    SUM(Clean_EdTech_Fact[Revenue]),
-    0
-) * 100
-```
-
-### ROI on Marketing
-```dax
-ROI on Marketing = 
-DIVIDE(
-    [Net Profit],
-    SUM(Clean_EdTech_Fact[Marketing_spend]),
-    0
+    SUM(Clean_EdTech_Fact[Revenue]) - SUM(Clean_EdTech_Fact[Marketing_spend]),
+    SUM(Clean_EdTech_Fact[Marketing_spend])
 )
+
+Cost per Enrollment =
+DIVIDE(SUM(Clean_EdTech_Fact[Marketing_spend]), SUM(Clean_EdTech_Fact[Enrollments_clean]), 0)
+
+Conversion Rate % =
+DIVIDE(SUM(Clean_EdTech_Fact[Enrollments_clean]), SUM(Clean_EdTech_Fact[Leads_Clean]), 0) * 100
 ```
-
-### Cost per Enrollment
-```dax
-Cost per Enrollment = 
-DIVIDE(
-    SUM(Clean_EdTech_Fact[Marketing_spend]),
-    SUM(Clean_EdTech_Fact[Enrollments_clean]),
-    0
-)
-```
-
-### Conversion Rate %
-```dax
-Conversion Rate % = 
-DIVIDE(
-    SUM(Clean_EdTech_Fact[Enrollments_clean]),
-    SUM(Clean_EdTech_Fact[Leads_Clean]),
-    0
-) * 100
-```
-
----
-
-## 💼 Business Recommendations
-
-Based on the analysis, here are actionable recommendations:
-
-### 1. **Scale High-Margin Courses**
-- Increase marketing budget for Performance Marketing, SQL Bootcamp, and Data Analytics
-- These deliver **30%+ margins** with strong demand
-
-### 2. **Optimize Volume Courses**
-- Digital Marketing and Financial Modeling have high enrollment but lower margins
-- Consider price increases or cost reduction strategies
-- Target margin improvement from **18% to 25%**
-
-### 3. **Review Underperformers**
-- Brand Strategy and Corporate Finance show **<15% margins**
-- Options: Restructure pricing, reduce costs, or discontinue
-- Reallocate resources to profitable courses
-
-### 4. **Marketing Budget Reallocation**
-- Shift budget from low-ROI courses (Brand Strategy: 1.1x) to high-ROI courses (SQL Bootcamp: 4.2x)
-- Target overall ROI improvement from **3.2x to 4.0x**
-
-### 5. **Conversion Rate Optimization**
-- Current rate: **6.4%** - industry average is 8-10%
-- Improve lead qualification and nurturing processes
-- A/B test landing pages and email campaigns
-
----
-
-## 🎓 Skills Demonstrated
-
-**Data Analysis:**
-- Data cleaning and transformation
-- Handling missing data
-- Statistical analysis
-- Profitability modeling
-
-**Business Intelligence:**
-- Dashboard design and UX
-- KPI definition
-- Data storytelling
-- Visual analytics
-
-**Technical Skills:**
-- Power BI Desktop
-- DAX (Data Analysis Expressions)
-- Power Query (M language)
-- Data modeling (star schema)
-
-**Business Acumen:**
-- EdTech domain knowledge
-- Marketing funnel analysis
-- Unit economics (CAC, LTV)
-- Strategic recommendations
-
----
 
 ## 📝 Methodology
-
-### 1. Data Preparation
-- Imported raw CSV with 9,999 records
-- Handled missing values using domain-appropriate strategies
-- Created calculated columns for revenue and costs
-- Validated data quality and flagged issues
-
-### 2. Data Modeling
-- Designed star schema with fact and dimension tables
-- Created date dimension for time intelligence
-- Established relationships for proper filtering
-
-### 3. Measure Development
-- Built 10+ DAX measures for KPIs
-- Implemented profit, margin, and ROI calculations
-- Created conversion rate and cost metrics
-
-### 4. Visualization
-- Designed single-page dashboard for clarity
-- Used appropriate chart types for each insight
-- Applied consistent color scheme and formatting
-- Added interactive slicers and filters
-
-### 5. Testing & Validation
-- Verified calculations against raw data
-- Tested all interactive features
-- Ensured cross-filtering works correctly
-
----
+1. **Prepare:** imported raw CSV, profiled missing values, imputed and flagged records in Power Query.
+2. **Model:** star schema with a fact table and dimension tables (including a date dimension).
+3. **Measure:** built 10+ DAX measures for profit, margin, ROI, cost and conversion metrics.
+4. **Visualise:** single-page dashboard with slicers and cross-filtering.
+5. **Validate:** cross-checked KPI totals against the course-level table (e.g., total revenue ₹2.53B → 25.2% margin on ₹636.4M profit).
 
 ## 🔮 Future Enhancements
+- [ ] **Course-level marketing ROI** table and visual
+- [ ] **Sensitivity check:** recompute key metrics on non-imputed rows only and compare with the full results
+- [ ] Pareto / profit-share analysis of enrollments vs profit
+- [ ] Multi-page layout (Executive, Profitability, Marketing)
+- [ ] YoY growth and moving averages in DAX
 
-Potential improvements for this project:
+## 📂 Repository Structure
+```
+├── EdTech_Messy_Raw_Data_10k.csv
+├── Ed-tech-Profitability and performance dashboard.pbit
+├── Dashboard Screenshot.png
+├── KPI Dashboard Screenshot.png
+├── screenshots/
+├── LICENSE
+└── README.md
+```
 
-- [ ] **Multi-page dashboard** with Executive, Profitability, and Marketing views
-- [ ] **Predictive analytics** - Enrollment forecasting using historical trends
-- [ ] **Customer segmentation** - Cluster analysis of student behavior
-- [ ] **What-if analysis** - Dynamic pricing scenario modeling
-- [ ] **Automated refresh** - Connect to live data source
-- [ ] **Mobile optimization** - Responsive layout for tablets/phones
-- [ ] **Advanced DAX** - YoY growth, moving averages, Pareto analysis
+## 🚀 How to Use
+1. Clone the repo or download the ZIP.
+2. Open the `.pbit` template in Power BI Desktop (free).
+3. Point the data source to `EdTech_Messy_Raw_Data_10k.csv` when prompted and click **Load**.
 
----
+## 👤 About
+**Pooja Jain**: PGDM (Finance & Business Analytics) student building a profile for data analytics roles.
+[LinkedIn](https://linkedin.com/in/poojajain54) · [GitHub](https://github.com/Pooja-Jain01)
 
 ## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👤 About Me
-
-**Pooja Jain** - Data Analyst passionate about transforming data into actionable business insights.
-
-### Connect With Me
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/poojajain54/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/Pooja-Jain01)
-[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:pjpoojajain54@example.com)
-
-I'm interested in:
-- 📊 Data Analytics & Business Intelligence roles
-- 💼 Freelance dashboard projects
-- 🤝 Collaborations on data visualization
-- 📚 Knowledge sharing & mentorship
-
----
-
-## 🙏 Acknowledgments
-
-- Power BI community for best practices and inspiration
-- EdTech industry reports for business context validation
-- Open-source contributors for data visualization examples
-
----
-
-## ⭐ Show Your Support
-
-If you found this project helpful:
-- ⭐ **Star this repository**
-- 🔀 **Fork it** for your own analysis
-- 📢 **Share it** on LinkedIn
-- 💬 **Provide feedback** via Issues
-
----
-
-<div align="center">
-
-**Built with ❤️ using Power BI**
-
-*Last updated: February 2026*
-
-</div>
+MIT License. See [LICENSE](LICENSE).
